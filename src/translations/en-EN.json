@@ -14,6 +14,59 @@
       "title": "Oops! Something went wrong.",
       "description": "We are sorry for the inconvenience. Please try again later.",
       "cta": "Reload the screen"
+    },
+    "weather": {
+      "conditions": {
+        "clear": "Clear",
+        "clouds": "Cloudy",
+        "rain": "Rain",
+        "drizzle": "Drizzle",
+        "thunderstorm": "Thunderstorm",
+        "snow": "Snow",
+        "mist": "Mist",
+        "fog": "Fog",
+        "haze": "Haze"
+      },
+      "labels": {
+        "temperature": "Temperature",
+        "feels_like": "Feels like",
+        "humidity": "Humidity",
+        "pressure": "Pressure",
+        "wind_speed": "Wind Speed",
+        "visibility": "Visibility",
+        "uv_index": "UV Index",
+        "sunrise": "Sunrise",
+        "sunset": "Sunset"
+      },
+      "units": {
+        "celsius": "°C",
+        "fahrenheit": "°F",
+        "kmh": "km/h",
+        "mph": "mph",
+        "hpa": "hPa",
+        "percent": "%",
+        "km": "km"
+      },
+      "errors": {
+        "location_not_found": "Location not found",
+        "network_error": "Network error",
+        "permission_denied": "Permission denied"
+      },
+      "actions": {
+        "search": "Search",
+        "add_city": "Add City",
+        "remove_city": "Remove City",
+        "refresh": "Refresh",
+        "settings": "Settings"
+      },
+      "location": {
+        "permission_blocked_title": "Location Access Blocked",
+        "permission_blocked_message": "To show weather for your location, please enable location permissions in Settings.",
+        "button_not_now": "Not Now",
+        "button_open_settings": "Open Settings",
+        "error_location": "Location error",
+        "error_permission_denied": "Permission denied"
+      }
     }
   }
 }

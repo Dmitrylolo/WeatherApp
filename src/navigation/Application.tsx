@@ -17,8 +17,56 @@ function ApplicationNavigator() {
   return (
     <SafeAreaProvider>
       <NavigationContainer theme={navigationTheme}>
-        <Stack.Navigator key={variant} screenOptions={{ headerShown: false }}>
-          <Stack.Screen component={Startup} name={Paths.Startup} />
+        <Stack.Navigator
+          initialRouteName={Paths.Startup}
+          key={variant}
+          screenOptions={{
+            animationTypeForReplace: 'push',
+            headerShown: false,
+            presentation: 'card',
+          }}
+        >
+          {/* Main Screens */}
+          <Stack.Screen
+            component={Startup}
+            name={Paths.Startup}
+            options={{
+              animationTypeForReplace: 'pop',
+            }}
+          />
+
+          {/* Weather Screens */}
+          <Stack.Screen
+            component={Example} // TODO: Replace with WeatherScreen
+            name={Paths.Weather}
+            options={{
+              gestureEnabled: false, // Disable swipe back on main screen
+            }}
+          />
+
+          <Stack.Screen
+            component={Example} // TODO: Replace with CityListScreen
+            name={Paths.CityList}
+          />
+
+          <Stack.Screen
+            component={Example} // TODO: Replace with WeatherDetailScreen
+            name={Paths.WeatherDetail}
+          />
+
+          {/* Modal Screens */}
+          <Stack.Group screenOptions={{ presentation: 'modal' }}>
+            <Stack.Screen
+              component={Example} // TODO: Replace with SearchScreen
+              name={Paths.Search}
+              options={{
+                gestureDirection: 'vertical',
+                gestureEnabled: true,
+              }}
+            />
+          </Stack.Group>
+
+          {/* Keep Example for development */}
           <Stack.Screen component={Example} name={Paths.Example} />
         </Stack.Navigator>
       </NavigationContainer>

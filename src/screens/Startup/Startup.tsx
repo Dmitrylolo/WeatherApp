@@ -11,22 +11,30 @@ import { useTheme } from '@/theme';
 import { AssetByVariant } from '@/components/atoms';
 import { SafeScreen } from '@/components/templates';
 
+const STARTUP_DELAY = 2000;
+
 function Startup({ navigation }: RootScreenProps<Paths.Startup>) {
   const { fonts, gutters, layout } = useTheme();
   const { t } = useTranslation();
 
   const { isError, isFetching, isSuccess } = useQuery({
     queryFn: () => {
-      return Promise.resolve(true);
+      const promise = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(true);
+        }, STARTUP_DELAY);
+      });
+      return promise;
     },
     queryKey: ['startup'],
   });
+
 
   useEffect(() => {
     if (isSuccess) {
       navigation.reset({
         index: 0,
-        routes: [{ name: Paths.Example }],
+        routes: [{ name: Paths.Weather }],
       });
     }
   }, [isSuccess, navigation]);

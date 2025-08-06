@@ -1,0 +1,64 @@
+{
+  "weatherapp": {
+    "common_appName": {
+      "full": "React Native WeatherApp",
+      "initials": "RNB"
+    },
+    "common_error": "Ups! Etwas ist schief gelaufen.",
+    "screen_example": {
+      "hello_user": "Hallo, mein Name ist {{name}}",
+      "title": "Willkommen bei $t(common_appName.full)",
+      "description": "Möchten Sie einige Funktionen entdecken? Klicken Sie einfach auf eine der drei Schaltflächen am unteren Bildschirmrand. Die erste ermöglicht es Ihnen, eine REST-API aufzurufen. Die zweite lässt Sie die Themenfarbe ändern. Und die dritte ermöglicht es, die Sprache zu ändern."
+    },
+    "error_boundary": {
+      "title": "Ups! Etwas ist schief gelaufen.",
+      "description": "Wir entschuldigen uns für die Unannehmlichkeiten. Bitte versuchen Sie es später erneut.",
+      "cta": "Bildschirm neu laden"
+    },
+    "weather": {
+      "conditions": {
+        "clear": "Klar",
+        "clouds": "Bewölkt",
+        "rain": "Regen",
+        "drizzle": "Nieselregen",
+        "thunderstorm": "Gewitter",
+        "snow": "Schnee",
+        "mist": "Nebel",
+        "fog": "Nebel",
+        "haze": "Dunst"
+      },
+      "labels": {
+        "temperature": "Temperatur",
+        "feels_like": "Gefühlt wie",
+        "humidity": "Luftfeuchtigkeit",
+        "pressure": "Luftdruck",
+        "wind_speed": "Windgeschwindigkeit",
+        "visibility": "Sichtweite",
+        "uv_index": "UV-Index",
+        "sunrise": "Sonnenaufgang",
+        "sunset": "Sonnenuntergang"
+      },
+      "units": {
+        "celsius": "°C",
+        "fahrenheit": "°F",
+        "kmh": "km/h",
+        "mph": "mph",
+        "hpa": "hPa",
+        "percent": "%",
+        "km": "km"
+      },
+      "errors": {
+        "location_not_found": "Standort nicht gefunden",
+        "network_error": "Netzwerkfehler",
+        "permission_denied": "Berechtigung verweigert"
+      },
+      "actions": {
+        "search": "Suchen",
+        "add_city": "Stadt hinzufügen",
+        "remove_city": "Stadt entfernen",
+        "refresh": "Aktualisieren",
+        "settings": "Einstellungen"
+      }
+    }
+  }
+}

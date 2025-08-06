@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
-import { useI18n, useUser } from '@/hooks';
+import { useI18n, useLocationFlow, useUser } from '@/hooks';
 import { useTheme } from '@/theme';
 
 import { AssetByVariant, IconByVariant, Skeleton } from '@/components/atoms';
@@ -26,9 +26,16 @@ function Example() {
     variant,
   } = useTheme();
 
+  const pos = useLocationFlow();
+
   const [currentId, setCurrentId] = useState(-1);
 
   const fetchOneUserQuery = useFetchOneQuery(currentId);
+
+  const handleLocationRequest = () => {
+    console.warn('Requesting location...');
+    pos.mutate();
+  };
 
   useEffect(() => {
     if (fetchOneUserQuery.isSuccess) {
@@ -84,6 +91,24 @@ function Example() {
             >
               {t('screen_example.description')}
             </Text>
+
+            {pos.isPending ? (
+              <Text style={[fonts.size_16, fonts.gray400]}>
+                Requesting location...
+              </Text>
+            ) : undefined}
+
+            {pos.isSuccess && pos.data ? (
+              <Text style={[fonts.size_16, fonts.gray800]}>
+                Location: {pos.data.lat.toFixed(4)}, {pos.data.lon.toFixed(4)}
+              </Text>
+            ) : undefined}
+
+            {pos.isError ? (
+              <Text style={[fonts.size_16, fonts.gray400]}>
+                Location error: {pos.error.message}
+              </Text>
+            ) : undefined}
           </View>
 
           <View
@@ -125,6 +150,14 @@ function Example() {
               testID="change-language-button"
             >
               <IconByVariant path="language" stroke={colors.purple500} />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={handleLocationRequest}
+              style={[components.buttonCircle, gutters.marginBottom_16]}
+              testID="request-location-button"
+            >
+              <IconByVariant path="send" stroke={colors.red500} />
             </TouchableOpacity>
           </View>
         </View>

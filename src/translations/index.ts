@@ -5,12 +5,14 @@ import type { Language } from '@/hooks/language/schema';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import de from './de-DE.json';
 import en from './en-EN.json';
 import fr from './fr-FR.json';
 
 export const defaultNS = 'weatherapp';
 
 export const resources = {
+  'de-DE': de,
   'en-EN': en,
   'fr-FR': fr,
 } as const satisfies Record<Language, unknown>;

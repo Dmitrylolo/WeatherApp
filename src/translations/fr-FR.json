@@ -14,6 +14,59 @@
       "title": "Oups ! Quelque chose s'est mal passé.",
       "description": "Nous sommes désolés pour le désagrément. Veuillez réessayer plus tard.",
       "cta": "Recharger l'écran"
+    },
+    "weather": {
+      "conditions": {
+        "clear": "Clair",
+        "clouds": "Nuageux",
+        "rain": "Pluie",
+        "drizzle": "Bruine",
+        "thunderstorm": "Orage",
+        "snow": "Neige",
+        "mist": "Brume",
+        "fog": "Brouillard",
+        "haze": "Brume"
+      },
+      "labels": {
+        "temperature": "Température",
+        "feels_like": "Ressenti",
+        "humidity": "Humidité",
+        "pressure": "Pression",
+        "wind_speed": "Vitesse du vent",
+        "visibility": "Visibilité",
+        "uv_index": "Indice UV",
+        "sunrise": "Lever du soleil",
+        "sunset": "Coucher du soleil"
+      },
+      "units": {
+        "celsius": "°C",
+        "fahrenheit": "°F",
+        "kmh": "km/h",
+        "mph": "mph",
+        "hpa": "hPa",
+        "percent": "%",
+        "km": "km"
+      },
+      "errors": {
+        "location_not_found": "Lieu introuvable",
+        "network_error": "Erreur réseau",
+        "permission_denied": "Autorisation refusée"
+      },
+      "actions": {
+        "search": "Rechercher",
+        "add_city": "Ajouter une ville",
+        "remove_city": "Supprimer la ville",
+        "refresh": "Actualiser",
+        "settings": "Paramètres"
+      },
+      "location": {
+        "permission_blocked_title": "Accès à la localisation bloqué",
+        "permission_blocked_message": "Pour afficher la météo de votre position, veuillez activer les autorisations de localisation dans les Paramètres.",
+        "button_not_now": "Pas maintenant",
+        "button_open_settings": "Ouvrir les Paramètres",
+        "error_location": "Erreur de localisation",
+        "error_permission_denied": "Autorisation refusée"
+      }
     }
   }
 }

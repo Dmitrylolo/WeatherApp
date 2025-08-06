@@ -1,10 +1,11 @@
 import ky from 'ky';
 
-const prefixUrl = `${process.env.API_URL ?? ''}/`;
-
-export const instance = ky.extend({
+const BASE_CONFIG = {
   headers: {
     Accept: 'application/json',
   },
-  prefixUrl,
-});
+  retry: 2,
+  timeout: 10_000,
+};
+
+export const instance = ky.extend(BASE_CONFIG);
